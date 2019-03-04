@@ -1,5 +1,5 @@
-function greeter(person){
-    return 'hello ' +  person
+function greeter(person: string) {
+    return 'hello ' + person
 }
 
 let user = 'john'

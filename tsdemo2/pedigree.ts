@@ -1,4 +1,9 @@
 #!/usr/bin/env ts-node
+
+function createPrefix(n: number): string {
+    return '----'.repeat(n)
+}
+
 {
     class Person {
         public children: Person[] = []
@@ -10,9 +15,8 @@
             this.children.push(child)
         }
         introduceFamily(n?: number): void {
-            if (!n) { n = 1 }
-            let prefix = '----'.repeat(n - 1)
-            console.log(`${prefix}${this.name}`)
+            n = n || 1
+            console.log(`${createPrefix(n - 1)}${this.name}`)
             this.children.forEach((child) => {
                 child.introduceFamily(n + 1)
             })

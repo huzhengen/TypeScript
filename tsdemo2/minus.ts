@@ -4,6 +4,7 @@ let b: number = parseInt(process.argv[3])
 
 if (Number.isNaN(a) || Number.isNaN(b)) {
     console.log('您输入的可能不是整数')
-    process.exit()
+    process.exit(1)
 }
 console.log(a - b)
+process.exit(0)

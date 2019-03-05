@@ -9,10 +9,12 @@
         addChild(child: Person): void {
             this.children.push(child)
         }
-        introduceFamily(): void {
-            console.log(this.name)
+        introduceFamily(n?: number): void {
+            if (!n) { n = 1 }
+            let prefix = '----'.repeat(n - 1)
+            console.log(`${prefix}${this.name}`)
             this.children.forEach((child) => {
-                child.introduceFamily()
+                child.introduceFamily(n + 1)
             })
         }
     }

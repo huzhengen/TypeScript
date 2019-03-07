@@ -1,25 +1,35 @@
 <template>
   <div>
-    <div>{{number}}</div>
+    <div>{{x}}</div>
 
     <div>
-      <button>-</button>
-      <button>+</button>
+      <button @click="minus">-</button>
+      <button @click="add">+</button>
     </div>
   </div>
 </template>
 
-
-<script>
-export default {
+<script lang="ts">
+import Vue from "vue";
+export default Vue.extend({
   name: "demo1",
   data() {
     return {
-      number: 0
+      x: 0
     };
+  },
+  methods: {
+    add() {
+      let x: number = (this.x += 1);
+      this.x = x;
+    },
+    minus() {
+      this.x -= 1;
+    }
   }
-};
+});
 </script>
+
 
 
 <style lang="sass" scoped>

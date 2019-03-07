@@ -15,10 +15,16 @@ module.exports = {
     module: {
         rules: [{
             test: /\.vue$/,
-            loader: 'vue-loader'
+            loader: 'vue-loader',
+            options: {
+                esModule: true,
+            },
         }, {
             test: /\.tsx?$/,
-            loader: 'ts-loader'
+            loader: 'ts-loader',
+            options: {
+                appendTsSuffixTo: [/\.vue$/],
+            }
         }]
     },
     plugins: [

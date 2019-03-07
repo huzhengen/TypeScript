@@ -3,8 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/index.ts',
     mode: 'development',
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js']
+    },
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist')
@@ -13,6 +16,9 @@ module.exports = {
         rules: [{
             test: /\.vue$/,
             loader: 'vue-loader'
+        }, {
+            test: /\.tsx?$/,
+            loader: 'ts-loader'
         }]
     },
     plugins: [

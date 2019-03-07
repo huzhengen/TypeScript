@@ -6,6 +6,6 @@ div.id = 'app'
 document.body.appendChild(div)
 
 new Vue({
-    el: '#app',
+    el: div,
     render: (h) => h(demo1)
 })

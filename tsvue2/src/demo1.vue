@@ -1,5 +1,12 @@
 <template>
-  <div>{{message}}</div>
+  <div>
+    <div>{{number}}</div>
+
+    <div>
+      <button>-</button>
+      <button>+</button>
+    </div>
+  </div>
 </template>
 
 
@@ -8,7 +15,7 @@ export default {
   name: "demo1",
   data() {
     return {
-      message: "demo1"
+      number: 0
     };
   }
 };

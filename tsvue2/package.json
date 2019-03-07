@@ -1,28 +1,32 @@
 {
-  "name": "tsvue2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.3.3",
-    "@babel/preset-env": "^7.3.1",
-    "babel-loader": "^8.0.5",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "css-loader": "^2.1.0",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "uglifyjs-webpack-plugin": "^2.1.2",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3"
-  },
-  "dependencies": {
-    "@webpack-cli/init": "^0.1.3"
-  }
+    "name": "tsvue2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build:dev": "webpack",
+        "build": "webpack --config webpack.prod.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.3.3",
+        "@babel/preset-env": "^7.3.1",
+        "babel-loader": "^8.0.5",
+        "babel-plugin-syntax-dynamic-import": "^6.18.0",
+        "css-loader": "^2.1.0",
+        "html-webpack-plugin": "^3.2.0",
+        "node-sass": "^4.11.0",
+        "sass-loader": "^7.1.0",
+        "style-loader": "^0.23.1",
+        "uglifyjs-webpack-plugin": "^2.1.2",
+        "webpack": "^4.29.6",
+        "webpack-cli": "^3.2.3",
+        "webpack-dev-server": "^3.2.1"
+    },
+    "dependencies": {
+        "@webpack-cli/init": "^0.1.3"
+    }
 }

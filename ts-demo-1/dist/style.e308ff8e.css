@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#demo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

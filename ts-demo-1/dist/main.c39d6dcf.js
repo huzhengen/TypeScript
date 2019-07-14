@@ -150,7 +150,7 @@ document.onmousemove = function (e) {
   }
 };
 
-document.onmouseup = function (e) {
+document.onmouseup = function () {
   isMove = false;
 };
 },{}],"C:/Users/lenovo/AppData/Roaming/npm-cache/_npx/7640/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {

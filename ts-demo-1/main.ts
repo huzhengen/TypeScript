@@ -1,4 +1,4 @@
-let div = document.createElement('div')
+let div: HTMLDivElement = document.createElement('div')
 div.style.border = '1px solid red'
 div.style.height = '100px'
 div.style.width = '100px'
@@ -6,16 +6,16 @@ div.id = 'demo'
 
 document.body.appendChild(div)
 
-let isMove = false
-let position = [0, 0]
+let isMove: boolean = false
+let position: [number, number] = [0, 0]
 
-div.onmousedown = (e) => {
+div.onmousedown = (e: MouseEvent) => {
     isMove = true
     position = [e.clientX, e.clientY]
 }
 console.log(div.style.top)
 
-document.onmousemove = (e) => {
+document.onmousemove = (e: MouseEvent) => {
     console.log(isMove)
     if (isMove) {
         let deltaX = e.clientX - position[0]
@@ -33,6 +33,6 @@ document.onmousemove = (e) => {
 
 }
 
-document.onmouseup = (e) => {
+document.onmouseup = () => {
     isMove = false
 }
